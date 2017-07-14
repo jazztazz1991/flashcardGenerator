@@ -1,4 +1,4 @@
-module.exports = function basicCard(front, back){
+module.exports = function(front, back){
     this.front = front;
     this.back = back;
 }
