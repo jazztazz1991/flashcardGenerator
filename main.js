@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-
+console.log("this file is running");
 var basicCard = require("./basicCard.js");
 var clozeCard = require("./clozeCard.js");
 var questions = require("./questions.js").questions;
@@ -27,7 +27,7 @@ function ask(){
     ]).then(function(inquirerResponse){
         console.log("\n");
         
-        if(inquirerResponse.guess.toLowerCase == holdQuestions[current].cloze.toLowerCase){
+        if(inquirerResponse.guess.toLowerCase() === holdQuestions[current].cloze.toLowerCase()){
             console.log("CORRECT!");
             correct++;
         }else{
