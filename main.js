@@ -28,7 +28,7 @@ function ask(){
         {
             type: "list",
             message: "Do you want cloze questions or basic questions?",
-            choices: ["cloze", "basic", "Add Cloze", "Add Basic"],
+            choices: ["cloze", "basic"],
             name: "question"
         }
     ]).then(function(inquirerResponse){
