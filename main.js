@@ -2,8 +2,8 @@ var inquirer = require("inquirer");
 
 var basicCard = require("./basicCard.js");
 var clozeCard = require("./clozeCard.js");
-var clozeQuestions = require("./clozeQuestions.js").questions;
-var basicQuestions = require("./basicQuestions.js").questions;
+var clozeQuestions = require("./questions.js").cloze;
+var basicQuestions = require("./questions.js").basic;
 
 var clozeQuest = [];
 var basicQuest = [];
@@ -28,7 +28,7 @@ function ask(){
         {
             type: "list",
             message: "Do you want cloze questions or basic questions?",
-            choices: ["cloze", "basic"],
+            choices: ["cloze", "basic", "Add Cloze", "Add Basic"],
             name: "question"
         }
     ]).then(function(inquirerResponse){
@@ -117,6 +117,7 @@ function basicAsk(){
         console.log("Answer: " + holdBack);
         console.log("---------");
         console.log("---------");
+        
         if(current < basicQuest.length - 1){
             current++;
             basicAsk();
